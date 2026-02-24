@@ -1,80 +1,94 @@
 # School Management System
 
-## Pages & Features
+School administration with student records, grades, and schedules.
 
-### 1. Dashboard
-- Student & staff headcount
-- Attendance summary today
-- Upcoming events & deadlines
-- Fee collection status
-- Announcements ticker
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Students
-- Student directory with class, section, status filters
-- Student profile: personal info, guardian details, photo
-- Enrollment & admission management
-- Promote / transfer students between classes
-- Student ID card generation
+## Tech Stack
 
-### 3. Classes & Sections
-- Class list with grade, section, room assignment
-- Timetable builder per class (drag-and-drop)
-- Subject assignment to class
-- Class teacher assignment
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Teachers & Staff
-- Staff directory with department & role filters
-- Teacher profile: qualifications, subjects, classes assigned
-- Staff attendance tracking
-- Leave management for staff
+## Getting Started
 
-### 5. Attendance
-- Daily attendance marking per class (present / absent / late)
-- Attendance calendar view per student
-- Attendance summary reports
-- Notify parents on absence
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Exams & Grades
-- Exam schedule creation
-- Grade entry per subject & student
-- Report card generation (PDF)
-- Grade analytics (class average, student ranking)
-- Grading scale configuration
+## License
 
-### 7. Fees & Finance
-- Fee structure setup per class / category
-- Invoice generation & distribution
-- Payment recording & receipt printing
-- Outstanding fees tracker
-- Scholarship / discount management
+MIT © Mehdi Nabhani
 
-### 8. Communication
-- Announcements (school-wide, class-specific)
-- Parent messaging (individual / broadcast)
-- Event calendar
-- Circular / notice board
+---
 
-### 9. Library
-- Book catalog with search & category filters
-- Issue & return tracking
-- Overdue alerts
-- Book reservation
+<details>
+<summary>📋 Original Feature Spec</summary>
 
-### 10. Transport
-- Route & bus management
-- Student-to-route assignment
-- Driver & vehicle details
-- Route map visualization
+# {{APP_TITLE}}
 
-### 11. Reports
-- Attendance reports by class, student, period
-- Exam performance analytics
-- Fee collection summary
-- Teacher workload report
+{{APP_DESCRIPTION}}
 
-### 12. Settings
-- Academic year & term configuration
-- School profile & branding
-- Grading scale setup
-- User roles & permissions
-- Notification preferences
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
